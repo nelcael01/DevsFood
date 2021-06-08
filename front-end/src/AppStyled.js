@@ -19,7 +19,8 @@ export const Menu = styled.div`
 
 export const PageBody = styled.div`
     display: flex;
-    background-color: #0000ff ;
+    background-color: #00980d;
+    background-image: url('/assests/bg.png');
     /* flex 1 faz esse elemento pegar o restante da pagina */
     flex: 1;
     

@@ -3,13 +3,14 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import MenuItem from './components/MenuItem/MenuItem';
 
+import PrivateRoute from './components/PrivateRoute'
 import HomeScreen from './pages/HomeScreen';
 import Tela2Screen from './pages/Tela2Screen';
 import {Container,Menu,PageBody} from './AppStyled'
-import PrivateRoute from './components/PrivateRoute'
+import Cart from './components/Cart/Cart';
 
 export default () => {
-    const name = useSelector(state => state.user.name);
+    
 
     return (
         <BrowserRouter>
@@ -36,8 +37,9 @@ export default () => {
                         </Route>
                     </Switch>
                 </PageBody>
+                <Cart />
             </Container>
-            <h1>Oi, {name}</h1>
+            
 
         </BrowserRouter>
     );
