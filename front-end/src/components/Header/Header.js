@@ -1,17 +1,23 @@
 import React,{useState} from 'react';
 import {Container,Logo,SearchInput} from './Header-styled'
 
-function Header(props) {
+function Header({search,onSearch}) {
 
-    const[inputActive, setinputActive] = useState(false);
+    const[inputActive, setinputActive] = useState(search == '' ? false : true);
 
+    function handleChange(e) {
+        onSearch(e.target.value)
+    }
+    
     // quando o campo está em foco
     function handleInputFocus() {
         setinputActive(true)
     }
     // quando o campo não está em foco
     function handleInputBlur(e) {
-      setinputActive(false)
+        if (search == '') {
+            setinputActive(false)
+        }
     }
 
     return(
@@ -19,6 +25,8 @@ function Header(props) {
             <Logo src='/assests/logo.png'></Logo>
             <SearchInput 
                 type='text'
+                value={search}
+                onChange={handleChange}
                 placeholder='Pesquise aqui...'
                 active={inputActive}
                 onFocus={handleInputFocus}

@@ -21,13 +21,13 @@ export const SearchInput = styled.input`
     width: ${props=>props.active ? 300 : 0}px;
     height: 50px;
     background-color: white;
+    font-size: 15px;
     outline: 0;
     background-image: url('/assests/search.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: 10px center ;
     padding-left: 50px;
-    cursor: pointer;
-    transition: all 0.5s;
-
+    cursor: ${props=>props.active ? 'text' : 'pointer' };
+    transition: all ease 0.5s;
 `
