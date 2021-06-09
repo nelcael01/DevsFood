@@ -7,7 +7,7 @@ function PrivateRoute(children, ...rest) {
     const token = useSelector(state=>state.user.token);
 
 
-    alert('Token'+token);
+    
     if (token == '') {
         history.push('/login')
         return null;
