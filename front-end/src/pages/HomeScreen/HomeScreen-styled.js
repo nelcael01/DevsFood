@@ -16,5 +16,11 @@ export const CategoryList = styled.div`
 
 `;
 
+export const ProductArea = styled.div``
+
+export const ProductList = styled.div``
+
+
+
 
 
