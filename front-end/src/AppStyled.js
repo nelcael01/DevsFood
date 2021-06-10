@@ -23,5 +23,7 @@ export const PageBody = styled.div`
     background-image: url('/assests/bg.png');
     /* flex 1 faz esse elemento pegar o restante da pagina */
     flex: 1;
+    /* fazendo o scroll da parte verde rodar */
+    overflow-y: auto;
     
 `;

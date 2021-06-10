@@ -3,9 +3,8 @@ import {LinkArea, LinkIcon} from './MenuItem-styled'
 import {useHistory, useLocation} from 'react-router-dom'
 
 
-function MenuItem({icon,link}) {
+function MenuItem({title,icon,link}) {
 
-    
     const history = useHistory();
     const location = useLocation();
 
@@ -20,7 +19,7 @@ function MenuItem({icon,link}) {
     }
 
     return(
-        <LinkArea active={isActive} href={link} onClick={handleLinkClick}>  
+        <LinkArea data-tip={title} data-for='tip-right' active={isActive} href={link} onClick={handleLinkClick}>  
             <LinkIcon src={icon}></LinkIcon>
         </LinkArea>
     )

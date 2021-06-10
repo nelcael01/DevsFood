@@ -9,6 +9,8 @@ function CategoryItem({data,activeCategory,setActiveCategory}) {
 
     return(
         <Container 
+            data-tip={data.name}
+            data-for='tip-top'
             onClick={handleCategoryClick}
             active={activeCategory} 
             id={data.id}

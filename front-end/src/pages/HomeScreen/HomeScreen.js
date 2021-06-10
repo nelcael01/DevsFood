@@ -7,10 +7,12 @@ import {
     Container,
     CategoryArea,
     CategoryList 
-    } from './styled';
+    } from './HomeScreen-styled';
 import Header from '../../components/Header/Header';
 import api from '../../api';
 import CategoryItem from '../../components/CategoryItem/CategoryItem'
+
+import ReactTooltip from 'react-tooltip';
 
 
 export default () => {
@@ -29,6 +31,7 @@ export default () => {
                 // setando as categorias recebidas no categories
                 setCategories(cat.result);
             }
+            ReactTooltip.rebuild();
         }
         getCategories();
     },[])
@@ -50,7 +53,7 @@ export default () => {
                             <CategoryItem 
                                 data={{ 
                                     id:0,
-                                    title:'Todas as categorias',
+                                    name:'Todas as categorias',
                                     image:'/assests/food-and-restaurant.png'
                                 }}
                                 activeCategory = {activeCategory}

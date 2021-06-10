@@ -3,8 +3,10 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import MenuItem from './components/MenuItem/MenuItem';
 
+import ReactTooltip from 'react-tooltip';
+
 import PrivateRoute from './components/PrivateRoute'
-import HomeScreen from './pages/HomeScreen';
+import HomeScreen from './pages/HomeScreen/HomeScreen';
 import Tela2Screen from './pages/Tela2Screen';
 import {Container,Menu,PageBody} from './AppStyled'
 import Cart from './components/Cart/Cart';
@@ -16,10 +18,9 @@ export default () => {
         <BrowserRouter>
             <Container>
                 <Menu>
-                    <img src="" alt="" />
-                    <MenuItem icon='/assests/store.png' link='/'/>
-                    <MenuItem icon='/assests/order.png' link='/orders'/>
-                    <MenuItem icon='/assests/profile.png' link='/profile'/>
+                    <MenuItem title='Loja' icon='/assests/store.png' link='/'/>
+                    <MenuItem title='Pedidos' icon='/assests/order.png' link='/orders'/>
+                    <MenuItem title='Meu Perfil' icon='/assests/profile.png' link='/profile'/>
                 </Menu>
                 <PageBody>
                     <Switch>
@@ -38,6 +39,9 @@ export default () => {
                     </Switch>
                 </PageBody>
                 <Cart />
+                {/* para utilizar tem que estar no elemento pai, no caso no app*/}
+                <ReactTooltip id='tip-top' place='top' effect='solid'/>
+                <ReactTooltip id='tip-right' place='right' effect='solid'/>
             </Container>
             
 
