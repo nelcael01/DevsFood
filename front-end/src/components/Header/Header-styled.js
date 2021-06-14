@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.div`
     background-color: #136713;
     border-radius: 10px;
@@ -9,12 +8,13 @@ export const Container = styled.div`
     /* colocar um de cada lado */
     justify-content: space-between;
     align-items: center;
-
 `
+
 export const Logo = styled.img`
     height: 70px;
     width: auto;
 `
+
 export const SearchInput = styled.input`
     border: 0;
     border-radius: 25px;
@@ -29,5 +29,4 @@ export const SearchInput = styled.input`
     padding-left: 50px;
     cursor: pointer;
     transition: all 0.5s;
-
 `
